@@ -5,14 +5,14 @@ class Solution(object):
         :rtype: int
         """
         dic = {}
-        l = 0
-        res = 0
-        for r, char in enumerate(s):
-            if char in dic:
-                l = max(dic[char] + 1, l)
-            dic[char] = r
-            res = max(r-l+1, res)
+        l, res = 0,0
+        for r, val in enumerate(s):
+            if val in dic:
+                l = max(dic[val]+1,l)
+            dic[val] = r
+            res = max(res, r-l+1)
         return res
+            
             
                 
                 
