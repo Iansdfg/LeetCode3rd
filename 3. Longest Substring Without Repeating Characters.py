@@ -12,7 +12,3 @@ class Solution(object):
             dic[val] = r
             res = max(res, r-l+1)
         return res
-            
-            
-                
-                
