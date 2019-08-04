@@ -17,6 +17,3 @@ class Solution(object):
                 m-=1
             i-=1
         nums1[:n] = nums2[:n]
-            
-                
-                
