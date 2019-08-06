@@ -4,11 +4,12 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        dic = {}
-        l, res = 0,0
-        for r, val in enumerate(s):
-            if val in dic:
-                l = max(dic[val]+1,l)
-            dic[val] = r
+        chars = dict()
+        res = 0
+        l = 0
+        for r, char in enumerate(s):
+            if char in chars:
+                l = max(l, chars[char]+1)
+            chars[char] = r
             res = max(res, r-l+1)
         return res
