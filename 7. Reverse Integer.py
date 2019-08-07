@@ -11,5 +11,4 @@ class Solution(object):
             res += x%10
             res*=10
             x //= 10
-        res = (res+x)*sign
-        return res if -(2**31)<= res<= (2**31)-1 else 0
+        return (res+x)*sign if -(2**31)<= res<= (2**31)-1 else 0
