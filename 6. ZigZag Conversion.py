@@ -9,10 +9,10 @@ class Solution(object):
         cycle = 2*numRows-2
         section_num = len(s)//cycle
         res = ''
-        for row in range(numRows):
+        for row in xrange(numRows):
             section = 0
-            while section<section_num+1:
-                if row ==0 or row ==numRows-1:
+            for section in xrange(section_num+1):
+                if row ==0 or row == numRows-1:
                     if section*cycle+row< len(s):
                         res+=s[section*cycle+row]
                 else:
@@ -20,7 +20,5 @@ class Solution(object):
                         res+=s[section*cycle+row]
                     if (section+1)*cycle-row< len(s):
                         res+=s[(section+1)*cycle-row]
-                section += 1
-                # print(res)
         return res
         
