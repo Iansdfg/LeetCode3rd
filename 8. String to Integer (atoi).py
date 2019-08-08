@@ -14,7 +14,7 @@ class Solution(object):
         res = 0 
         for i in range(len(s)):
             if s[i].isdigit():
-                res = res*10 + int(s[i])
+                res = res*10 + ord(s[i])-ord('0')
             else:
                 break 
         return max(min(res* sign, 2147483647),-2147483648) 
