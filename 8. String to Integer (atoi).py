@@ -16,5 +16,7 @@ class Solution(object):
             if s[i].isdigit():
                 res = res*10 + int(s[i])
             else:
-                return max(min(res* sign, 2147483647),-2147483648) 
+                break 
         return max(min(res* sign, 2147483647),-2147483648) 
+            
+            
