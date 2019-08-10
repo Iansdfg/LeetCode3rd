@@ -11,6 +11,7 @@ class Solution(object):
         :type node: Node
         :rtype: Node
         """
+        if node == None:return None
         visited = [node]
         queue = collections.deque()
         queue.append(node)
@@ -29,5 +30,3 @@ class Solution(object):
                 node_dic[dic_key_node].neighbors.append(node_dic[neighbor])
                 
         return node_dic[node]
-        
-        
