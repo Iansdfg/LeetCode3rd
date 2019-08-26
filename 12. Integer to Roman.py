@@ -46,6 +46,3 @@ class Solution(object):
                 res+='I'
                 num-=1
         return res
-                
-            
-            
