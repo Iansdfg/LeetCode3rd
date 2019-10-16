@@ -19,3 +19,19 @@ class Solution(object):
                 matrix[i][last] = top
                 
         
+class Solution(object):
+    def rotate(self, matrix):
+        """
+        :type matrix: List[List[int]]
+        :rtype: None Do not return anything, modify matrix in-place instead.
+        """
+        rows = len(matrix)
+        cols = len(matrix[0])
+        for row in range(rows//2):
+            matrix[row], matrix[rows-1-row] = matrix[rows-1-row], matrix[row]
+                
+        for row in xrange(rows):
+                for col in xrange(row):
+                    matrix[row][col], matrix[col][row] = matrix[col][row], matrix[row][col]
+                
+                
