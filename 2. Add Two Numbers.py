@@ -13,6 +13,7 @@ class Solution(object):
         """
         head = curr = ListNode(0)
         val = 0
+        
         while l1 or l2 or val:
             if l1: 
                 val += l1.val 
@@ -21,7 +22,9 @@ class Solution(object):
                 val += l2.val
                 l2 = l2.next
             curr.next = ListNode(val%10)
+            
             val //= 10
             curr = curr.next
+            
         return head.next
             
