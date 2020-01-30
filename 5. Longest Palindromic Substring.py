@@ -1,7 +1,9 @@
 class Solution:
     def longestPalindrome(self, s: str) -> str:
+        
         if len(s)<2:
             return s
+        
         maxx = ''
         for pos in range(1, len(s)):
             sub = self.check_palindrome(s, pos, pos)
@@ -17,4 +19,6 @@ class Solution:
             r += 1
             l -= 1
         return s[l + 1:r]
+        
+        
         
